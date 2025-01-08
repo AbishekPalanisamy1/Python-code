@@ -325,4 +325,23 @@
 # s2 = "silent"
 # print(isanagram(s1, s2))
 
+import mysql.connector
+con=mysql.connector.connect(host='localhost',user='root',password="Abishek12345#@@#",db="user")
+pycon=con.cursor()
+# pycon.execute('create Database user;')
+# pycon.execute('create table student (name varchar(50),rollno int,class varchar(15));')
+# pycon.execute('show Databases;')
+# for i in pycon:
+#     print(i)
+# sql="Insert into student(name,rollno,class) values(%s,%s,%s);"
+# val=("Deebak","016","20cs8a")
+# pycon.execute(sql,val)
+# con.commit()
+# print(con)
+# pycon.execute('create table teacher (name varchar(50),rollno int,class varchar(15));')
+sql="Insert into teacher(name,rollno,class) values(%s,%s,%s);"
+val=("keerthi","047","20cs8a")
+pycon.execute(sql,val)
+con.commit()
+# pycon.execute("alter table teacher add column id int primary key auto_increment not null")
 
